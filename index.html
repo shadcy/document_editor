@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>E Docs IIT Bombay Hospital</h1>
+    </header>
+
+    <div id="main">
+      <h2>Doctor | Medical Form</h2>
+      <p>E Doc Management</p>
+
+      <h1>Document Editor</h1>
+      <div class="grid-container">
+        <canvas id="pageCanvas" width="1240" height="1754"> </canvas>
+
+        <section class="options" style="padding: 2%">
+          <ul>
+            <li>
+              <label for="strokeStyle">Line Colour</label>
+              <div name="strokeStyle" class="color-selector">
+                <div
+                  class="color-preset"
+                  style="background-color: blue"
+                  onclick="setColor('blue')"
+                ></div>
+                <div
+                  class="color-preset"
+                  style="background-color: black"
+                  onclick="setColor('black')"
+                ></div>
+                <div
+                  class="color-preset"
+                  style="background-color: red"
+                  onclick="setColor('red')"
+                ></div>
+
+                <input
+                  type="color"
+                  id="colorPicker"
+                  onchange="setColor(this.value)"
+                />
+              </div>
+            </li>
+            <li>
+              <label for="lineWidth">Line Width</label>
+              <div name="lineWidth" class="stroke-selector">
+                <div name="lineWidth" class="stroke-selector-inner">
+                  <button onclick="setWidth(2)">Thin 🖋️</button>
+                  <button onclick="setWidth(5)">Medium 🖋️</button>
+                  <button onclick="setWidth(10)">Thick 🖋️</button>
+                </div>
+
+                <input
+                  type="range"
+                  name="lineWidth"
+                  min="1"
+                  max="100"
+                  value="5"
+                  oninput="setWidth(this.value)"
+                />
+              </div>
+            </li>
+            <!-- <li>
+                <label for="lineCap">Line Cap</label>
+                <select name="lineCap">
+                  <option value="round" selected>Round</option>
+                  <option value="butt">Butt</option>
+                  <option value="square">Square</option>
+                </select>
+              </li> -->
+            <li>
+              <button class="modeBtn current" id="drawBtn">Draw</button>
+              <button class="modeBtn" id="eraseBtn">Simple Eraser</button>
+              <button class="modeBtn" id="objecteraseBtn">Stroke Eraser</button>
+            </li>
+            <li>
+              <button onclick="fabCanvas.cstmClearObjects()">Clear</button>
+            </li>
+            <li>
+              <button id="undoBtn">Undo</button>
+              <button id="redoBtn">Redo</button>
+            </li>
+            <li>
+              <button id="exporForm">Download</button>
+            </li>
+            <li>
+              <select
+                id="background-select"
+                onchange="setBackground(this.value)"
+              >
+                <option value="pdf/prototyp.png">Medical Information</option>
+                <option value="pdf/prototype2.png">Appointment Request</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <p>Static Footer</p>
+    </footer>
+
+    <script src="../vendor/fabric.js"></script>
+    <script src="../assets/js/fabric_extension.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/controls.js"></script>
+  </body>
+</html>
