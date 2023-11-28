@@ -1,0 +1,166 @@
+/* Container styling */
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* Sections styling */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.canvas-container {
+  /* grid-area: canvas; */
+  border: solid #000 10px;
+  border-radius: 5px;
+  cursor: crosshair;
+  /* background: url("prototyp.png"); */
+  touch-action: none;
+}
+
+.grid-container {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "options canvas-container";
+  grid-gap: 1px;
+}
+
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  list-style-type: none;
+  padding: 0.5em;
+}
+
+/* Your previous CSS here */
+
+/* Additional CSS for the static header and footer */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+}
+
+.options {
+  grid-area: options;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul > li {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+/* Styling the options */
+select option {
+  padding: 10px;
+}
+
+button.current {
+  background-color: blue;
+}
+
+.color-selector {
+  display: flex;
+  align-items: center;
+}
+
+.stroke-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stroke-selector-inner {
+  flex-direction: row;
+}
+
+.color-preset {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.circle-select {
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: black;
+}
+
+#colorPicker {
+  margin-left: 10px;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  padding: 1px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
